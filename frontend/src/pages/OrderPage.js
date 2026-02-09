@@ -282,6 +282,10 @@ export default function OrderPage({ cart, setCart }) {
       {/* Success Dialog */}
       <Dialog open={showSuccess} onOpenChange={setShowSuccess}>
         <DialogContent className="bg-surface border-[#2E3626] text-cream max-w-sm text-center">
+          <DialogHeader>
+            <DialogTitle className="sr-only">{t('order.success')}</DialogTitle>
+            <DialogDescription className="sr-only">{t('order.success_desc')}</DialogDescription>
+          </DialogHeader>
           <div className="flex flex-col items-center py-6">
             <CheckCircle className="w-16 h-16 text-olive-400 mb-4" />
             <h3 className="font-heading text-2xl text-cream mb-2">{t('order.success')}</h3>
