@@ -128,8 +128,8 @@ export default function OrderPage({ cart, setCart }) {
         <DialogContent className="bg-surface border-[#2E3626] text-cream max-w-sm">
           <DialogHeader>
             <DialogTitle className="font-heading text-xl">{sizeDialog?.name}</DialogTitle>
+            <DialogDescription className="text-cream/50 text-sm font-body">{t('order.select_size')}</DialogDescription>
           </DialogHeader>
-          <p className="text-cream/50 text-sm font-body mb-4">{t('order.select_size')}</p>
           <div className="space-y-2">
             {sizeDialog?.prices.map((price, i) => {
               if (price === null) return null;
