@@ -133,7 +133,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-olive-500 flex-shrink-0" />
-                  <a href="tel:+32237789200" className="text-cream/70 font-body text-sm hover:text-olive-400 transition-colors">
+                  <a href="tel:+3223777892" className="text-cream/70 font-body text-sm hover:text-olive-400 transition-colors">
                     {t('contact.phone')}
                   </a>
                 </div>
