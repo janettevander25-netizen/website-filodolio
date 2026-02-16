@@ -272,7 +272,7 @@ export const translations = {
       address: 'Avenue Houba de Strooper, 11',
       city: '1020 Laken, Belgie',
       phone_label: 'Telefoon',
-      phone: '+32 (0)2 377 892 00',
+      phone: '02 377 78 92',
       phone_desc: 'Voor bestellingen en reserveringen',
       email_label: 'E-mail',
       email: 'filodolio23@gmail.com',
