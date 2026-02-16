@@ -43,7 +43,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-cream/50 text-sm">
                 <Phone className="w-4 h-4 text-olive-500 flex-shrink-0" />
-                <a href="tel:+32237789200" className="hover:text-olive-400 transition-colors">{t('contact.phone')}</a>
+                <a href="tel:+3223777892" className="hover:text-olive-400 transition-colors">{t('contact.phone')}</a>
               </div>
               <div className="flex items-center gap-2 text-cream/50 text-sm">
                 <Mail className="w-4 h-4 text-olive-500 flex-shrink-0" />
