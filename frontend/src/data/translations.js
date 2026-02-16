@@ -70,7 +70,7 @@ export const translations = {
       address: 'Avenue Houba de Strooper, 11',
       city: '1020 Laeken, Belgique',
       phone_label: 'Telephone',
-      phone: '+32 (0)2 377 892 00',
+      phone: '02 377 78 92',
       phone_desc: 'Pour vos commandes et reservations',
       email_label: 'Email',
       email: 'filodolio23@gmail.com',
