@@ -1,24 +1,45 @@
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Pizza } from 'lucide-react';
 
 export default function MenuItem({ item, onAdd, showAddButton = false }) {
   const { t } = useLanguage();
   const hasSizes = item.prices.length > 1;
+  const [imgError, setImgError] = useState(false);
+
+  /*  
+    POUR AJOUTER UNE PHOTO :
+    Place ton image dans /public/images/pizzas/
+    Nomme-la avec l'id de la pizza. Ex: margherita.jpg, al-tonno.jpg
+    Formats acceptes : .jpg, .png, .webp
+  */
+  const imagePath = `/images/pizzas/${item.id}.jpg`;
 
   return (
     <div
       data-testid={`menu-item-${item.id}`}
       className="menu-card group relative bg-surface border border-white/5 overflow-hidden rounded-sm"
     >
-      {/* Photo Placeholder */}
+      {/* Photo or Placeholder */}
       <div className="relative h-44 bg-olive-900/40 flex items-center justify-center overflow-hidden">
-        <div className="photo-placeholder absolute inset-0" />
-        <div className="relative z-10 flex flex-col items-center gap-2 text-olive-500/60">
-          <Pizza className="w-10 h-10" strokeWidth={1.2} />
-          <span className="text-[10px] uppercase tracking-[0.2em] font-body">
-            {t('menu.photo_placeholder')}
-          </span>
-        </div>
+        {!imgError ? (
+          <img
+            src={imagePath}
+            alt={item.name}
+            onError={() => setImgError(true)}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <>
+            <div className="photo-placeholder absolute inset-0" />
+            <div className="relative z-10 flex flex-col items-center gap-2 text-olive-500/60">
+              <Pizza className="w-10 h-10" strokeWidth={1.2} />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-body">
+                {t('menu.photo_placeholder')}
+              </span>
+            </div>
+          </>
+        )}
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-olive-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
