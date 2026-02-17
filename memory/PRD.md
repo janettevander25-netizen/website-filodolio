@@ -53,3 +53,15 @@ Build a professional pizzeria website for "Filo d'Olio" in Laeken, Belgium. Insp
 - Integration Stripe/payment gateway
 - SEO optimization
 - Social media links
+
+## Updates (Feb 17, 2026)
+- Updated ALL menu prices from new documents (PDF + image)
+- Added 8 new pizzas: Jambon Champignon, Boscaiola, Scampi, Regina, Vegan, Saporita, Spaccanapoli, Genovese
+- Added new dessert: Panna Cotta
+- New category: "Speciales Sans Sauce Tomate"
+- Updated supplements: 1.50€, XL 2.50€, Mozza/Scampi/Charcuterie 3€, Burrata 5€
+- Updated phone: 02 377 78 92
+- Updated drinks: 2.5€ with more options
+- Panuozzi prices reduced to 8-10€
+- Smart image system: auto-loads photos from /public/images/pizzas/{id}.jpg, falls back to placeholder
+- Created LIRE-MOI-PHOTOS.md guide for adding pizza photos
